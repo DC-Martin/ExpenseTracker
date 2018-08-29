@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @charge.account.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @charge.category %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= number_to_currency @charge.amount %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @charge.created_at.strftime("%m-%d-%Y") %>
+</p>
+<%= link_to 'Edit', edit_charge_path(@charge) %> |
+<%= link_to 'Back', charges_path %>
